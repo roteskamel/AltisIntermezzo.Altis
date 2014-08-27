@@ -1,0 +1,36 @@
+author = "E12 Spirit"; 
+onLoadName = "[CO 23] Altis Intermezzo";
+//loadScreen = "awMissionLogo.jpg";
+respawn = 3;
+respawndelay = 5;
+disabledAI = 1;
+RespawnDialog = 1;
+
+
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 16;
+	maxPlayers = 23;
+};
+
+class CfgSounds
+{
+  sounds[] = {};
+
+  	class Inject
+   	 { 
+		name = "Inject";
+    		sound[] = {"\Sounds\Inject.ogg", db+0, 1.0};
+    		titles[] = {};
+   	 };
+ 					
+};
+
+#include "taw_vd\dialog.hpp"
+
+class CfgFunctions
+{
+	#include "taw_vd\CfgFunctions.hpp"
+};

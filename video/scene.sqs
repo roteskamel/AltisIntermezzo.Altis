@@ -1,0 +1,93 @@
+titlecut [" ","BLACK IN",1]
+_camera = "camera" camcreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+;comment "17:17:03";
+_camera camPrepareTarget [105087.59,-6938.45,-21966.01];
+_camera camPreparePos [9292.12,11411.21,1.72];
+_camera camPrepareFOV 0.700;
+_camera camCommitPrepared 0
+@camCommitted _camera
+
+~20
+
+_camera camPrepareTarget [105087.59,-6938.45,-21966.01];
+_camera camPreparePos [9292.12,11411.21,1.72];
+_camera camPrepareFOV 0.700;
+_camera camCommitPrepared 0
+@camCommitted _camera
+
+_camera camPrepareTarget slammer1;
+_camera camPreparePos [9292.12,11411.21,1.72];
+_camera camPrepareFOV 0.700;
+_camera camCommitPrepared 5
+@camCommitted _camera
+
+;comment "17:42:23";
+_camera camPrepareTarget slammer1;
+_camera camPreparePos [9634.96,11272.17,9.27];
+_camera camPrepareFOV 0.700;
+_camera camCommitPrepared 20
+@camCommitted _camera
+
+#loop
+;comment "17:42:23";
+_camera camsetTarget slammer3;
+_camera camsetrelPos [2,-13,5];
+_camera camPrepareFOV 0.700;
+_camera camCommitPrepared 0
+@camCommitted _camera
+
+?!alive slammer1 : goto "nextscene"
+goto "loop"
+
+#nextscene
+;comment "18:34:12";
+_camera camPrepareTarget [63374.93,-68552.11,-26568.07];
+_camera camPreparePos [9362.42,11285.43,18.90];
+_camera camPrepareFOV 0.700;
+_camera camCommitPrepared 5
+@camCommitted _camera
+
+~2
+
+_camera camPrepareTarget heli1;
+_camera camPreparePos [9362.42,11285.43,18.90];
+_camera camPrepareFOV 0.700;
+_camera camCommitPrepared 5
+@camCommitted _camera
+
+_camera camPrepareTarget heli1;
+_camera camPreparePos [9362.42,11285.43,18.90];
+_camera camPrepareFOV 0.100;
+_camera camCommitPrepared 1
+@camCommitted _camera
+
+~3
+
+_camera camPrepareTarget heli1;
+#loop1
+_camera camsetTarget heli1;
+_camera camsetrelPos [3,-10,0];
+_camera camPrepareFOV 0.700;
+_camera camCommitPrepared 0
+@camCommitted _camera
+
+?!alive slammer3 : goto "nextscene1"
+goto "loop1"
+
+#nextscene1
+;comment "19:26:10";
+_camera camPrepareTarget [74297.53,-57247.55,-32430.54];
+_camera camPreparePos [9250.96,11381.91,18.47];
+_camera camPrepareFOV 0.354;
+_camera camCommitPrepared 10
+
+~15
+
+_camera cameraeffect ["terminate","back"]
+camdestroy _camera
+killchicken=true;
+publicvariable "killchicken";
+~2
+exit;
